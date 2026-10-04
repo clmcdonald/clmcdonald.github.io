@@ -4,7 +4,7 @@ This project hosts a React application that powers the [clmcdonald.com](https://
 
 ## Architecture
 
-The site is hosted by GitHub Pages. Commits to the default branch automatically get deployed.
+The site is hosted by Cloudflare. Commits to the default branch automatically get deployed.
 
 ## Development
 
