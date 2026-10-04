@@ -28,8 +28,11 @@ jobs:
           node-version: 20
           cache: 'yarn'
 
+      - name: Enable corepack
+        run: corepack enable
+
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Lint project
         run: yarn lint:ci
