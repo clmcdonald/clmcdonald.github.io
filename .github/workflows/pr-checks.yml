@@ -1,0 +1,33 @@
+name: Pull Request Quality Checks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: ['master']
+
+jobs:
+  pr-lint-and-test:
+    name: Lint & Test PR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run ESLint
+        run: yarn lint:ci
+
+      - name: Run Tests
+        run: yarn test
+
+      - name: Verify Build
+        run: yarn build
