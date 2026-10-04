@@ -1,0 +1,44 @@
+import { createFileRoute } from '@tanstack/react-router';
+
+export const Route = createFileRoute('/hearts')({
+  component: HeartsPage,
+  // TODO: Add loader for game state hydration
+  // loader: () => ...
+});
+
+function HeartsPage() {
+  return (
+    <div
+      style={{
+        minHeight: '100dvh',
+        backgroundColor: '#0d5c2e',
+        color: '#fff',
+        fontFamily: 'system-ui, sans-serif',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '16px',
+      }}
+    >
+      <h1 style={{ fontSize: '2rem', margin: 0 }}>♡ Hearts</h1>
+      <p style={{ opacity: 0.8, marginTop: '8px' }}>
+        The classic card game — coming soon.
+      </p>
+      <div
+        style={{
+          marginTop: '32px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px',
+          fontSize: '0.9rem',
+          opacity: 0.5,
+          textAlign: 'center',
+        }}
+      >
+        <span>♠ ♣ ♥ ♦</span>
+        <span>Pass · Play · Shoot the moon</span>
+      </div>
+    </div>
+  );
+}
