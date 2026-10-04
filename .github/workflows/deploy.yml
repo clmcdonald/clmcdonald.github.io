@@ -22,11 +22,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          enable-corepack: true
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Setup yarn cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
           cache: 'yarn'
 
       - name: Install dependencies
