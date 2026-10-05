@@ -8,4 +8,6 @@ The site is hosted by Cloudflare. Commits to the default branch automatically ge
 
 ## Development
 
-Run `yarn dev` to launch the development server.
+1. Clone the repository
+2. Run `yarn build` to generate a fresh build. If you don't do this, you will see TypeScript errors from Tanstack Router, which requires generated type files
+3. To start the development server, run `yarn dev`

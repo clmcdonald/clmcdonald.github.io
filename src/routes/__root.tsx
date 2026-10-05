@@ -1,4 +1,4 @@
-import { createRootRoute, Outlet } from '@tanstack/react-router';
+import { createRootRoute, HeadContent, Outlet } from '@tanstack/react-router';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
 export const Route = createRootRoute({
   component: () => (
     <>
+      <HeadContent />
       <GlobalStyle />
       <Outlet />
     </>
