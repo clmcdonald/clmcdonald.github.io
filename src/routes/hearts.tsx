@@ -1,4 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalHeartsStyle = createGlobalStyle`
+  body {
+    background-color: #0d5c2e;
+  }
+`;
 
 const HeartsPage = () => {
   return (
@@ -33,6 +40,7 @@ const HeartsPage = () => {
         <span>♠ ♣ ♥ ♦</span>
         <span>Pass · Play · Shoot the moon</span>
       </div>
+      <GlobalHeartsStyle />
     </div>
   );
 };
