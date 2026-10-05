@@ -43,6 +43,7 @@ export const Route = createFileRoute('/hearts')({
     meta: [
       { title: 'Hearts' },
       { name: 'description', content: 'The classic card game' },
+      { name: 'theme-color', content: '#0d5c2e' },
     ],
     links: [
       { rel: 'icon', sizes: '32x32', href: '/favicons/hearts/favicon-32.png' },
