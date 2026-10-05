@@ -1,4 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalHeartsStyle = createGlobalStyle`
+  body {
+    background-color: #0d5c2e;
+  }
+`;
 
 const HeartsPage = () => {
   return (
@@ -33,6 +40,7 @@ const HeartsPage = () => {
         <span>♠ ♣ ♥ ♦</span>
         <span>Pass · Play · Shoot the moon</span>
       </div>
+      <GlobalHeartsStyle />
     </div>
   );
 };
@@ -43,6 +51,7 @@ export const Route = createFileRoute('/hearts')({
     meta: [
       { title: 'Hearts' },
       { name: 'description', content: 'The classic card game' },
+      { name: 'theme-color', content: '#0d5c2e' },
     ],
     links: [
       { rel: 'icon', sizes: '32x32', href: '/favicons/hearts/favicon-32.png' },
