@@ -1,10 +1,11 @@
 {
-  "name": "clmcdonald.github.io",
+  "name": "clmcdonald.com",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "yarn dev",
     "build": "tsr generate && tsc -b && vite build",
     "lint": "eslint . --fix && prettier --write .",
     "lint:ci": "eslint . && prettier --check .",
